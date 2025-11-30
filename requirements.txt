@@ -1,9 +1,12 @@
 streamlit
-yfinance
-pandas
+streamlit-authenticator
+passlib[bcrypt]
+bcrypt
 numpy
 matplotlib
 scikit-learn
+tensorflow==2.15.0
 tensorflow-cpu==2.15.0
 keras==2.15.0
 joblib
+
