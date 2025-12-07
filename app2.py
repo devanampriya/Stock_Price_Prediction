@@ -3,7 +3,7 @@ import streamlit as st
 # --------------- SIMPLE LOGIN ---------------
 
 # Change these to whatever you want
-VALID_USERNAME = "admin"
+VALID_USERNAME = "abcd"
 VALID_PASSWORD = "1234"
 
 if "logged_in" not in st.session_state:
@@ -189,3 +189,4 @@ if st.sidebar.button("Train Model"):
     st.pyplot(fig)
 
 st.write("Adjust parameters and retrain the model to see different results!")
+
