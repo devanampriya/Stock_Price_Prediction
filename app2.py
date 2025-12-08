@@ -1,4 +1,39 @@
+# ---------------------------------------------------------
+#                   🔐 LOGIN SYSTEM
+# ---------------------------------------------------------
 
+import streamlit as st
+
+USERNAME = "admin"
+PASSWORD = "1234"
+
+# Create session state variable
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+def login_page():
+    st.title("🔐 Login Page")
+    st.write("Please enter your login credentials.")
+
+    user = st.text_input("Username")
+    pwd = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+        if user == USERNAME and pwd == PASSWORD:
+            st.session_state.logged_in = True
+            st.success("Login Successful! Loading the app...")
+            st.rerun()
+        else:
+            st.error("Incorrect username or password")
+
+# If not logged in, show login page and stop execution
+if not st.session_state.logged_in:
+    login_page()
+    st.stop()
+
+# ---------------------------------------------------------
+#                   YOUR ORIGINAL CODE STARTS HERE
+# ---------------------------------------------------------
 
 import streamlit as st
 import yfinance as yf
@@ -215,4 +250,3 @@ if st.sidebar.button("Train Model"):
     st.pyplot(fig)
 
 st.caption("Tip: If a ticker fails, try AAPL / TCS.NS / RELIANCE.NS. Use a stable internet connection for Yahoo Finance.")
-
