@@ -31,9 +31,7 @@ if not st.session_state.logged_in:
     login_page()
     st.stop()
 
-# ---------------------------------------------------------
-#                   YOUR ORIGINAL CODE STARTS HERE
-# ---------------------------------------------------------
+
 
 import streamlit as st
 import yfinance as yf
@@ -47,7 +45,7 @@ from keras.layers import Dense, LSTM
 
 # ---- Streamlit UI ----
 st.set_page_config(layout="wide")
-st.title("Stock Price Prediction using LSTM")
+st.title("Stock Price Prediction ")
 
 # Sidebar for user inputs
 st.sidebar.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
@@ -250,4 +248,5 @@ if st.sidebar.button("Train Model"):
     st.pyplot(fig)
 
 st.caption("Tip: If a ticker fails, try AAPL / TCS.NS / RELIANCE.NS. Use a stable internet connection for Yahoo Finance.")
+
 
