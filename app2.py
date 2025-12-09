@@ -12,7 +12,7 @@ if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 
 def login_page():
-    st.title("🔐 Login Page")
+    st.title("🔐 Login ")
     st.write("Please enter your login credentials.")
 
     user = st.text_input("Username")
@@ -250,3 +250,4 @@ if st.sidebar.button("Train Model"):
     st.pyplot(fig)
 
 st.caption("Tip: If a ticker fails, try AAPL / TCS.NS / RELIANCE.NS. Use a stable internet connection for Yahoo Finance.")
+
