@@ -4,7 +4,7 @@
 
 import streamlit as st
 
-USERNAME = "admin"
+USERNAME = "Deva"
 PASSWORD = "1234"
 
 # Create session state variable
@@ -248,5 +248,6 @@ if st.sidebar.button("Train Model"):
     st.pyplot(fig)
 
 st.caption("Tip: If a ticker fails, try AAPL / TCS.NS / RELIANCE.NS. Use a stable internet connection for Yahoo Finance.")
+
 
 
